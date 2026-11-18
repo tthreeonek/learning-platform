@@ -118,6 +118,10 @@
                     <includes>
                         <include>**/*Test.java</include>
                     </includes>
+                    <statelessTestsetReporter implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5Xml30StatelessReporter">
+                        <usePhrasedTestCaseMethodName>true</usePhrasedTestCaseMethodName>
+                        <usePhrasedTestSuiteClassName>true</usePhrasedTestSuiteClassName>
+                    </statelessTestsetReporter>
                 </configuration>
             </plugin>
             <!-- Интеграционные тесты (*IT) с PostgreSQL в Testcontainers запускает failsafe на фазе verify -->
@@ -136,6 +140,10 @@
                     <includes>
                         <include>**/*IT.java</include>
                     </includes>
+                    <statelessTestsetReporter implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5Xml30StatelessReporter">
+                        <usePhrasedTestCaseMethodName>true</usePhrasedTestCaseMethodName>
+                        <usePhrasedTestSuiteClassName>true</usePhrasedTestSuiteClassName>
+                    </statelessTestsetReporter>
                 </configuration>
             </plugin>
 
