@@ -1,0 +1,17 @@
+# Профиль для тестов: PostgreSQL поднимается в Testcontainers,
+# URL, логин и пароль подставляются автоматически через @ServiceConnection.
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+
+app:
+  seed:
+    enabled: false
+
+logging:
+  level:
+    root: WARN
+    ru.hw.learning: INFO
+    org.testcontainers: INFO

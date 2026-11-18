@@ -1,0 +1,13 @@
+# Профиль для локальной разработки: PostgreSQL на localhost (docker compose up -d postgres).
+# Значения по умолчанию можно переопределить переменными окружения.
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/learning}
+    username: ${DB_USERNAME:learning}
+    password: ${DB_PASSWORD:learning}
+  jpa:
+    show-sql: ${JPA_SHOW_SQL:false}
+
+logging:
+  level:
+    ru.hw.learning: DEBUG

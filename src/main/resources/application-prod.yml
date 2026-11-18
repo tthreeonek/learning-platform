@@ -1,0 +1,10 @@
+# Профиль для запуска в Docker / на сервере.
+# Значений по умолчанию нет: DB_URL, DB_USERNAME и DB_PASSWORD обязаны прийти из окружения (.env).
+spring:
+  jpa:
+    show-sql: false
+
+logging:
+  level:
+    root: INFO
+    ru.hw.learning: INFO
